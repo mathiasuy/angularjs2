@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+
+
+    
+    <title>Productos</title>
+</head>
+<body ng-controller="controlador as lista">
+
+    <div id="menu">
+        <ul>
+            <li><a href="#!">Cajero</a></li>
+            <li><a href="#!productos">Productos</a></li>
+        </ul>
+    </div>
+
+
+    <input type="text" ng-model="lista.nombre">
+    <input type="text" ng-model="lista.precio">
+    <input type="button" value="Agregar" ng-click="lista.addProducto()">
+
+
+    <select name="" id="" ng-model="lista.productoSeleccionado">
+        <option value="{{producto.id}}" ng-repeat="producto in lista.productos">{{producto.nombre}}</option>
+    </select>
+    <li ng-repeat="producto in lista.productos">
+        {{producto.nombre}}
+    </li>
+    <script src="app.js"></script>
+</body>
+</html>

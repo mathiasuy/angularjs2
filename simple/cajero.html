@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.js" integrity="sha512-rCVQBDU9Ny0aKLo1/B1MqgRjWEMlCL3WJ0DD6mJeK6qMZqpN9JCRxPtMQWWR9XWCMFIqlSgT4uOdwpvxWTSejw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.js" integrity="sha512-C92rntF0G0YH9kHzQlpux7ADvyKgyUwBqusewsHs/0ibOTNuHxFyVqDkI0BIcLGyP76fxgLOpMOLO6kmHCS/xA==" crossorigin="anonymous"></script>
+     <script src="app.js"></script>
+    <title>Cajero</title>
+</head>
+<body ng-controller="controlador as lista">
+
+    <select name="" id="" ng-model="lista.productoSeleccionado">
+        <option value="{{producto.id}}" ng-repeat="producto in lista.productos">{{producto.nombre}}</option>
+    </select>
+    <li ng-repeat="producto in lista.productos">
+        {{producto.nombre}}
+    </li>
+    <input type="text" ng-model="lista.cantidad">
+    <input type="button" ng-model="lista.addToCajero()" value="Agregar">
+
+</body>
+</html>
